@@ -14,15 +14,15 @@ jobs:
         uses: hashicorp/setup-terraform@v2 
         with:
           terraform_version: 1.1.9
-      - name: Terraform init
+      - name: terraform init
         run: terraform init 
-      - name: Terraform fmt
+      - name: terraform fmt
         run: terraform fmt
-      - name: Terraform validate
+      - name: terraform validate
         run: terraform validate
-      - name: Terraform plan 
+      - name: terraform plan 
         run: terraform plan
       - name: Terraform apply
         run: terraform apply -auto-approve 
-      - name: Terraform destroy
+      - name: terraform destroy
         run: terraform destroy -auto-approve
