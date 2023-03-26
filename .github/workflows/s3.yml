@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@vi
-      - name: Set Terrafor
-        uses: hashicorp/setup-terraforn@v2 
+      - name: Set Terraform
+        uses: hashicorp/setup-terraform@v2 
         with:
           terraform_version: 1.1.9
       - name: Terraform init
@@ -21,8 +21,8 @@ jobs:
       - name: Terraform validate
         run: terraform validate
       - name: Terraform plan 
-        run: terrafors plan
+        run: terraform plan
       - name: Terraform apply
         run: terraform apply -auto-approve 
       - name: Terraform destroy
-        run: terrafors destroy -auto-approve
+        run: terraform destroy -auto-approve
