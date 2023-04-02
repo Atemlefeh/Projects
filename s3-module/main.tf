@@ -75,7 +75,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "ajc_bucket_sse" {
 }
 
 # Creating Lifecycle Rule
-############################
+#########################
 resource "aws_s3_bucket_lifecycle_configuration" "ajc_bucket_lifecycle_rule" {
   # Must have bucket versioning enabled first
   depends_on = [aws_s3_bucket_versioning.ajc_bucket_versioning]
